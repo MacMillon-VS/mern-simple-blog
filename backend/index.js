@@ -13,7 +13,7 @@ const fs = require('fs');
 const dotenv = require('dotenv')
 
 const salt = bcrypt.genSaltSync(10);
-const secret = 'asdfe45we45w345wegw345werjktjwertkj';
+const secret = process.env.JWT_SECRET;
 
 app.use(cors({credentials:true,origin:'http://localhost:5173'}));
 app.use(express.json());
